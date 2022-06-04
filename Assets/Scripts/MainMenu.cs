@@ -9,10 +9,12 @@ public class MainMenu : MonoBehaviour
 
     public GameObject deletePanel;
 
+    public CharacterSelector[] charactersToDelete;
+
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
@@ -23,7 +25,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(levelToLoad) ;
+        SceneManager.LoadScene(levelToLoad);
     }
 
     public void ExitGame()
@@ -31,4 +33,23 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void DeleteSave()
+    {
+        deletePanel.SetActive(true);
+    }
+
+    public void ConfirmDelete()
+    {
+        deletePanel.SetActive(false);
+
+        foreach(CharacterSelector theChar in charactersToDelete)
+        {
+            PlayerPrefs.SetInt(theChar.playerToSpawn.name, 0);
+        }
+    }
+
+    public void CancelDelete()
+    {
+        deletePanel.SetActive(false);
+    }
 }

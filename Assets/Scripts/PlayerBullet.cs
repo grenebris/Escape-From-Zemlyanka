@@ -33,7 +33,14 @@ public class PlayerBullet : MonoBehaviour
         if (other.tag == "Enemy")
         {
             other.GetComponent<EnemyController>().DamageEnemy(damageToGive);
-        }      
+        }
+
+        if(other.tag == "Boss")
+        {
+            BossController.instance.TakeDamage(damageToGive);
+
+            Instantiate(BossController.instance.hitEffect, transform.position, transform.rotation);
+        }
     }
 
     private void OnBecameInvisible()
