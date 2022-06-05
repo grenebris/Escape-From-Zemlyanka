@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public string levelToLoad;
+    //public string level1;
+    //public string level2;
+    //public string level3;
 
-    public GameObject deletePanel;
+    //public GameObject deletePanel;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +23,19 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void StartGame()
+    public void Level1()
     {
-        SceneManager.LoadScene(levelToLoad);
+        SceneManager.LoadScene("Level 1");
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene("Level 2");
+    }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene("Level 3");
     }
 
     public void ExitGame()

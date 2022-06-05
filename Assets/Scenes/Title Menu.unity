@@ -180,6 +180,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2138234114}
+    - target: {fileID: 3907673222213494262, guid: 9b35c7b234e2ad640991f8bf9856182a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 3907673222213494263, guid: 9b35c7b234e2ad640991f8bf9856182a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -367,6 +372,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2138234114}
+    - target: {fileID: 3907673222213494262, guid: 9b35c7b234e2ad640991f8bf9856182a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Level2
+      objectReference: {fileID: 0}
     - target: {fileID: 3907673222213494263, guid: 9b35c7b234e2ad640991f8bf9856182a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1203,9 +1213,19 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 3907673222213494262, guid: 9b35c7b234e2ad640991f8bf9856182a,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907673222213494262, guid: 9b35c7b234e2ad640991f8bf9856182a,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2138234114}
+    - target: {fileID: 3907673222213494262, guid: 9b35c7b234e2ad640991f8bf9856182a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendMessage
+      objectReference: {fileID: 0}
     - target: {fileID: 3907673222213494263, guid: 9b35c7b234e2ad640991f8bf9856182a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1450,5 +1470,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decea1c5577827c459992a829fd1f587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Character Select
-  deletePanel: {fileID: 0}
