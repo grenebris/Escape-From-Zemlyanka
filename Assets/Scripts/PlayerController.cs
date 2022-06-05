@@ -13,15 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Transform gunArm;
 
-    //private Camera theCam;
-
     public Animator anim;
-
-    /* public GameObject bulletToFire;
-    public Transform firePoint;
-
-    public float timeBetweenShots;
-    private float shotCounter; */
 
     public SpriteRenderer bodySR;
 
@@ -41,15 +33,11 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
-        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //theCam = Camera.main;
-
         activeMoveSpeed = moveSpeed;
 
         UIController.instance.currentGun.sprite = availableGuns[currentGun].gunUI;
@@ -65,8 +53,6 @@ public class PlayerController : MonoBehaviour
             moveInput.y = Input.GetAxisRaw("Vertical");
 
             moveInput.Normalize();
-
-            //transform.position += new Vector3(moveInput.x * Time.deltaTime * moveSpeed, moveInput.y * Time.deltaTime * moveSpeed, 0f);
 
             theRB.velocity = moveInput * activeMoveSpeed;
 
@@ -88,29 +74,6 @@ public class PlayerController : MonoBehaviour
             Vector2 offset = new Vector2(mousePos.x - screenPoint.x, mousePos.y - screenPoint.y);
             float angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
             gunArm.rotation = Quaternion.Euler(0, 0, angle);
-
-
-
-            /* if (Input.GetMouseButtonDown(0))
-            {
-                Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                shotCounter = timeBetweenShots;
-                AudioManager.instance.PlaySFX(12);
-
-            }
-
-            if (Input.GetMouseButton(0))
-            {
-                shotCounter -= Time.deltaTime;
-
-                if (shotCounter <= 0)
-                {
-                    Instantiate(bulletToFire, firePoint.position, firePoint.rotation);
-                    AudioManager.instance.PlaySFX(12);
-
-                    shotCounter = timeBetweenShots;
-                }
-            } */
 
             if(Input.GetKeyDown(KeyCode.Tab))
             {

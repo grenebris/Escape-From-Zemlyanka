@@ -23,6 +23,11 @@ public class MainMenu : MonoBehaviour
         
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene("Title Menu");
+    }
+
     public void Level1()
     {
         SceneManager.LoadScene("Level 1");
