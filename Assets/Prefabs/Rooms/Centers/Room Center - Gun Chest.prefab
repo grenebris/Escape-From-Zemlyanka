@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &314113833604740140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2853806791863629560}
+  m_Layer: 0
+  m_Name: CoinSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2853806791863629560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314113833604740140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5, y: -1.71, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1359597893126526306}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &654557861071151080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,7 +1558,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 5
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1678,7 +1708,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 11
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1762,8 +1792,8 @@ Tilemap:
       type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 293646839581133090, guid: 0ffb38ae7757b0d458841358c17b7fb6, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -3922058650836889757, guid: 0ffb38ae7757b0d458841358c17b7fb6,
       type: 3}
@@ -1776,16 +1806,16 @@ Tilemap:
   - m_RefCount: 4
     m_Data: {fileID: 8027105548391325564, guid: 0ffb38ae7757b0d458841358c17b7fb6,
       type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -3162382792782226116, guid: 0ffb38ae7757b0d458841358c17b7fb6,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: -6718109486221116179, guid: 0ffb38ae7757b0d458841358c17b7fb6,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 293646839581133090, guid: 0ffb38ae7757b0d458841358c17b7fb6, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 6704227715981378337, guid: 0ffb38ae7757b0d458841358c17b7fb6,
       type: 3}
@@ -2134,6 +2164,8 @@ Transform:
   m_Children:
   - {fileID: 1359597892975280167}
   - {fileID: 1359597893981655742}
+  - {fileID: 2853806791863629560}
+  - {fileID: 8334691749149812943}
   m_Father: {fileID: 5113265066524052853}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2200,15 +2232,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47dd454405120774b820a32ced969b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potentialGuns:
-  - {fileID: 5345533770886781993, guid: 3ad31bcb26782bb439d6e42edca66d06, type: 3}
-  - {fileID: 7812454047774814062, guid: 3aa62e5affe9d314cb979fd5e1d83846, type: 3}
-  - {fileID: 5304752443954981178, guid: c147457ff8219184baa87965cc067cfa, type: 3}
+  ChestGoods:
+  - {fileID: 5345533770886781994, guid: 3ad31bcb26782bb439d6e42edca66d06, type: 3}
+  - {fileID: 4648958299950149208, guid: 1c8999544ae228e49a4aeb9fe3a4d37c, type: 3}
+  - {fileID: 767255673612065574, guid: 75a34a5bd5fc22e4aa13cba8b52e193c, type: 3}
+  itemDropPercent: 90
   theSR: {fileID: 1359597893126526317}
   chestOpen: {fileID: 444756885432138965, guid: 815f98a145a4ae14d897a7f431477ea9,
     type: 3}
   notification: {fileID: 1359597893614722220}
-  spawnPoint: {fileID: 1359597893981655742}
+  GunSpawnPoint: {fileID: 1359597893981655742}
+  CoinSpawnPoint: {fileID: 2853806791863629560}
+  HealthSpawnPoint: {fileID: 8334691749149812943}
   scaleSpeed: 2
 --- !u!61 &1359597893126526319
 BoxCollider2D:
@@ -2366,7 +2401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359597893981655742}
   m_Layer: 0
-  m_Name: spawnPoint
+  m_Name: GunSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2380,7 +2415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359597893981655737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.54, z: 0}
+  m_LocalPosition: {x: 0, y: -1.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1359597893126526306}
@@ -2485,6 +2520,36 @@ MonoBehaviour:
   openWhenEnemiesCleared: 0
   enemies: []
   theRoom: {fileID: 0}
+--- !u!1 &4711146641119415053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8334691749149812943}
+  m_Layer: 0
+  m_Name: HealthSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8334691749149812943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4711146641119415053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5, y: -1.71, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1359597893126526306}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6142667365570493274
 GameObject:
   m_ObjectHideFlags: 0

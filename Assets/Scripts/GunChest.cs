@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GunChest : MonoBehaviour
 {
-    public GunPickup[] potentialGuns;
+    public GameObject[] ChestGoods;
+    public float itemDropPercent;
 
     public SpriteRenderer theSR;
     public Sprite chestOpen;
@@ -13,7 +14,9 @@ public class GunChest : MonoBehaviour
 
     private bool canOpen, isOpen;
 
-    public Transform spawnPoint;
+    public Transform GunSpawnPoint;
+    public Transform CoinSpawnPoint;
+    public Transform HealthSpawnPoint;
 
     public float scaleSpeed = 2f;
 
@@ -30,13 +33,36 @@ public class GunChest : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                int gunSelect = Random.Range(0, potentialGuns.Length);
+                float dropChance;
+                int RandCoinAmount;
 
-                Instantiate(potentialGuns[gunSelect], spawnPoint.position, spawnPoint.rotation);
+                for (int i = 0; i < 3; i++)
+                {
+                    dropChance = Random.Range(0f, 100f);
+
+                    if (dropChance < itemDropPercent)
+                    {
+                        if ((ChestGoods[i].GetComponent("CoinPickup") as CoinPickup) != null)
+                        {
+                            RandCoinAmount = Random.Range(5, 10);
+                            for (int j = 0; j < RandCoinAmount; j++)
+                                Instantiate(ChestGoods[i], CoinSpawnPoint.position, CoinSpawnPoint.rotation);
+
+                        }
+                        if ((ChestGoods[i].GetComponent("GunPickup") as GunPickup) != null)
+                            Instantiate(ChestGoods[i], GunSpawnPoint.position, GunSpawnPoint.rotation);
+
+                        if ((ChestGoods[i].GetComponent("HealthPickup") as HealthPickup) != null)
+                            Instantiate(ChestGoods[i], HealthSpawnPoint.position, HealthSpawnPoint.rotation);
+
+                    }
+                }
+
 
                 theSR.sprite = chestOpen;
 
                 isOpen = true;
+
 
                 transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
             }

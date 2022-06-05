@@ -45,6 +45,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -106,8 +107,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4657866952445553560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.081, y: -0.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.279, y: -0.2145, z: 0}
+  m_LocalScale: {x: 0.4500402, y: 0.4500402, z: 0.4500402}
   m_Children:
   - {fileID: 3046401556017658116}
   m_Father: {fileID: 4657866952632965641}
@@ -127,6 +128,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -329,6 +331,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -362,7 +365,7 @@ SpriteRenderer:
   m_Size: {x: 0.75, y: 0.1875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4657866953238821208
@@ -410,6 +413,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -434,8 +438,7 @@ SpriteRenderer:
   m_SortingLayerID: 59874395
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3542127132570728493, guid: a47294d8f066c634d90ee371916313ff,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15a66deee853bbd4ab953e161f36660a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -491,6 +494,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -524,7 +528,7 @@ SpriteRenderer:
   m_Size: {x: 0.3125, y: 0.3125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &950497252567596967
@@ -534,10 +538,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4657866952445553543}
     m_Modifications:
-    - target: {fileID: 7215396523932315458, guid: b52c30ff84f2b984088f67cb865c48cb,
+    - target: {fileID: 2843502150907561635, guid: b52c30ff84f2b984088f67cb865c48cb,
         type: 3}
-      propertyPath: m_Name
-      value: Pistol
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2843502150907561635, guid: b52c30ff84f2b984088f67cb865c48cb,
         type: 3}
@@ -556,6 +560,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2843502150907561635, guid: b52c30ff84f2b984088f67cb865c48cb,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2843502150907561635, guid: b52c30ff84f2b984088f67cb865c48cb,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -571,16 +580,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2843502150907561635, guid: b52c30ff84f2b984088f67cb865c48cb,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2843502150907561635, guid: b52c30ff84f2b984088f67cb865c48cb,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2843502150907561635, guid: b52c30ff84f2b984088f67cb865c48cb,
-        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
@@ -593,6 +592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7215396523932315458, guid: b52c30ff84f2b984088f67cb865c48cb,
+        type: 3}
+      propertyPath: m_Name
+      value: Pistol
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b52c30ff84f2b984088f67cb865c48cb, type: 3}

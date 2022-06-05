@@ -24,7 +24,6 @@ public class UIController : MonoBehaviour
     public Image currentGun;
     public Text gunText;
 
-    public Slider bossHealthBar;
 
 
     private void Awake()
