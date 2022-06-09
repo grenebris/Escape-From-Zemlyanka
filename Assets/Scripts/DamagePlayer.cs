@@ -19,7 +19,6 @@ public class DamagePlayer : MonoBehaviour
 
     public void DoDamage()
     {
-        //Debug.Log(damage);
 
         if (damage)
         {

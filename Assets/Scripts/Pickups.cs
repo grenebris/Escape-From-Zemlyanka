@@ -31,6 +31,9 @@ public class Pickups : MonoBehaviour
             if(this.gameObject.name == "Health Pickup 1(Clone)")
                 PlayerHealthController.instance.HealPlayer(healAmount);
 
+            if (this.gameObject.name == "Health Pickup 3(Clone)")
+                PlayerHealthController.instance.HealPlayer(3);
+
             if (this.gameObject.name == "Coin Pickup(Clone)")
                 LevelManager.instance.GetCoins(coinValue);
 

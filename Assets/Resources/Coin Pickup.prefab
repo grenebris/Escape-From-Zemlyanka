@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4648958299950149211}
   - component: {fileID: 4648958299950149210}
   - component: {fileID: 4648958299950149209}
-  - component: {fileID: 4648958299950149212}
   - component: {fileID: 7332773354474449782}
   m_Layer: 14
   m_Name: Coin Pickup
@@ -100,20 +99,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.41
---- !u!114 &4648958299950149212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4648958299950149208}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9df710fac95856f49b749e6ec8106a65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinValue: 1
-  waitToBeCollected: 0.5
 --- !u!114 &7332773354474449782
 MonoBehaviour:
   m_ObjectHideFlags: 0

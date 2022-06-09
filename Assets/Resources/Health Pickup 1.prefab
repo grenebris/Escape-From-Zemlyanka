@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 767255673612065571}
   - component: {fileID: 767255673612065572}
   - component: {fileID: 767255673612065573}
-  - component: {fileID: 719302438711985979}
   m_Layer: 14
   m_Name: Health Pickup 1
   m_TagString: Untagged
@@ -92,11 +91,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767255673612065574}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87f5ec37460432144b86d8d97cf2f479, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a50a429fb740364b83d8958302e703f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinValue: 1
   healAmount: 1
   waitToBeCollected: 0.5
 --- !u!61 &767255673612065573
@@ -125,18 +125,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0642765}
   m_EdgeRadius: 0
---- !u!114 &719302438711985979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767255673612065574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a50a429fb740364b83d8958302e703f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinValue: 1
-  healAmount: 1
-  waitToBeCollected: 0.5

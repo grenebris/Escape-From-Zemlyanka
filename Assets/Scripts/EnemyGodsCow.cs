@@ -14,7 +14,13 @@ public class EnemyGodsCow : EnemyAnt
     // Update is called once per frame
     void Update()
     {
-        RunAway();
+        if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) > runawayRange)
+            Chase();
+        else if (Vector3.Distance(transform.position, PlayerController.instance.transform.position) == runawayRange){
+            moveDirection = Vector3.zero;
+        }
+        else
+            RunAway();
         DoDamage();
         Shoot();
     }

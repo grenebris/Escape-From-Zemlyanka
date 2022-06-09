@@ -61,7 +61,6 @@
     <Compile Include="Assets\Scripts\BrokenPieces.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CharacterTracker.cs" />
-    <Compile Include="Assets\Scripts\CoinPickup.cs" />
     <Compile Include="Assets\Scripts\DamagePlayer.cs" />
     <Compile Include="Assets\Scripts\EnemyAnt.cs" />
     <Compile Include="Assets\Scripts\EnemyBug.cs" />
@@ -71,7 +70,6 @@
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\GunChest.cs" />
     <Compile Include="Assets\Scripts\GunPickup.cs" />
-    <Compile Include="Assets\Scripts\HealthPickup.cs" />
     <Compile Include="Assets\Scripts\LevelExit.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />

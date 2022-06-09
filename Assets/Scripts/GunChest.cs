@@ -42,7 +42,7 @@ public class GunChest : MonoBehaviour
 
                     if (dropChance < itemDropPercent)
                     {
-                        if ((ChestGoods[i].GetComponent("CoinPickup") as CoinPickup) != null)
+                        if ((ChestGoods[i].GetComponent("Coin Pickup") as Pickups) != null)
                         {
                             RandCoinAmount = Random.Range(5, 10);
                             for (int j = 0; j < RandCoinAmount; j++)
@@ -52,7 +52,7 @@ public class GunChest : MonoBehaviour
                         if ((ChestGoods[i].GetComponent("GunPickup") as GunPickup) != null)
                             Instantiate(ChestGoods[i], GunSpawnPoint.position, GunSpawnPoint.rotation);
 
-                        if ((ChestGoods[i].GetComponent("HealthPickup") as HealthPickup) != null)
+                        if ((ChestGoods[i].GetComponent("Health Pickup 1") as Pickups) != null)
                             Instantiate(ChestGoods[i], HealthSpawnPoint.position, HealthSpawnPoint.rotation);
 
                     }
