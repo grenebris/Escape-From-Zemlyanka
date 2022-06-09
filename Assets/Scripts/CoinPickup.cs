@@ -6,7 +6,7 @@ public class CoinPickup : MonoBehaviour
 {
     public int coinValue = 1;
 
-    public float waitToBeCollected;
+    public float waitToBeCollected = .5f;
 
     // Start is called before the first frame update
     void Start()

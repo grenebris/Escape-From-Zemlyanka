@@ -10,8 +10,10 @@ public class EnemyController : MonoBehaviour
 
     [Header("Chase Player")]
     public bool shouldChasePlayer;
+  ////////////////////////////////////
     public float rangeToChasePlayer;
     private Vector3 moveDirection;
+  ////////////////////////////////////
 
     [Header("Run Away")]
     public bool shouldRunAway;

@@ -42,7 +42,7 @@ public class GunPickup : MonoBehaviour
                 gunClone.transform.parent = PlayerController.instance.gunArm;
                 gunClone.transform.position = PlayerController.instance.gunArm.position;
                 gunClone.transform.localRotation = Quaternion.Euler(Vector3.zero);
-                gunClone.transform.localScale = Vector3.one;
+                gunClone.transform.localScale = new Vector3(0.5f,0.5f,1);
 
                 PlayerController.instance.availableGuns.Add(gunClone);
                 PlayerController.instance.currentGun = PlayerController.instance.availableGuns.Count - 1;

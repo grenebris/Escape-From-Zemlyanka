@@ -17,7 +17,7 @@ public class HealthPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(waitToBeCollected > 0)
+        if (waitToBeCollected > 0)
         {
             waitToBeCollected -= Time.deltaTime;
         }
@@ -25,7 +25,7 @@ public class HealthPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player" && waitToBeCollected <= 0)
+        if (other.tag == "Player" && waitToBeCollected <= 0)
         {
             PlayerHealthController.instance.HealPlayer(healAmount);
 
